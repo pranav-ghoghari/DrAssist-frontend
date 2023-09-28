@@ -1,0 +1,19 @@
+<div id="container">
+  <mat-toolbar color="primary" id="main-header">
+    <span>Patient Selection Dashboard</span>
+  </mat-toolbar>
+  <mat-sidenav-container >
+
+    <mat-sidenav mode="side" opened="true">
+      <app-search-box></app-search-box>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="ehr-container">
+        <app-ehr-area></app-ehr-area>
+      </div>
+
+      <app-symptoms></app-symptoms>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

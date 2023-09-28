@@ -1,0 +1,13 @@
+.mat-elevation-z2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This will center the direct children horizontally */
+}
+.full-width {
+    width: 100vb;
+}
+.submit-button{
+    display: flex;
+    margin-left: 38%;
+    background-color: #4c9ccd !important;
+}

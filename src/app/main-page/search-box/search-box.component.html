@@ -1,0 +1,36 @@
+<mat-card class="search-box">
+  <mat-card-header class="card-header">
+    <mat-card-title class="search-patient-title">1. Search Patient</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form (submit)="search()">
+      <mat-form-field class="form-group">
+        <input matInput placeholder="ID" [(ngModel)]="searchCriteria.ID" name="id">
+      </mat-form-field>
+      <mat-form-field class="form-group">
+        <input matInput placeholder="Name" [(ngModel)]="searchCriteria.Name" name="name">
+      </mat-form-field>
+      <mat-form-field class="form-group">
+        <input matInput type="date" placeholder="Date of Birth" [(ngModel)]="searchCriteria.DateOfBirth" name="dob">
+      </mat-form-field>
+      <button mat-raised-button type="submit" class="search-button">Search</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<div class="search-results-container">
+ <h2><mat-card-title>2. Select a Patient</mat-card-title></h2>
+  <div *ngIf="searchResults && searchResults.length > 0">
+    <ng-container *ngFor="let result of searchResults">
+      <button mat-raised-button (click)="selectResult(result)" style="width: -webkit-max-content; width: -moz-max-content; width: max-content;">
+        ID: {{ result.ID }}<br>
+        Name: {{ result.Name || 'Not available' }}<br>
+        Date of Birth: {{ result.DateOfBirth || 'Not available' }}<br>
+        <!-- Display other properties as needed -->
+      </button>
+      <br>
+    </ng-container>
+  </div>
+  <div *ngIf="!searchResults || searchResults.length === 0">No results found</div>
+</div>
+

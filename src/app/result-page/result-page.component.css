@@ -1,0 +1,38 @@
+/* Add spacing between the title bar and the button */
+.button-container {
+    margin-top: 16px; /* Adjust the margin-top value as needed */
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Add spacing between the button and the table */
+  .table-container {
+    margin-top: 16px; /* Adjust the margin-top value as needed */
+  }
+ 
+    
+/* Center container vertically and horizontally */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  /* Style for the result card */
+  .result-card {
+    background-color: #2196F3; /* Use your desired background color */
+    color: white; /* Text color for the card */
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+  }
+  .main-title{
+    background-color: #4c9ccd !important;
+  }
+  
+  

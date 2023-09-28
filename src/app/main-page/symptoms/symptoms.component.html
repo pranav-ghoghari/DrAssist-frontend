@@ -1,0 +1,10 @@
+<div class="mat-elevation-z2">
+  <h2>4. Enter Symptoms</h2>
+  <form (submit)="saveAndExportData()">
+    <mat-form-field class="full-width">
+      <textarea matInput [(ngModel)]="symptoms" name="symptoms" rows="4" placeholder="Enter Symptoms"></textarea>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" type="submit" class="submit-button">Submit the Symptoms</button>
+  </form>
+</div>

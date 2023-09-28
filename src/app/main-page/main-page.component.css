@@ -1,0 +1,39 @@
+/* Add your custom styles here */
+.mat-toolbar{
+  background-color: #4c9ccd;
+}
+
+mat-sidenav {
+    width: 300px; /* Set the desired width for the side navigation */
+    height: 100vh;
+  }
+  
+.main-header{
+  height: 50px;
+}
+  /* Style for the heading card */
+.heading-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.heading-card {
+  background-color: #2196F3; /* Use your desired background color */
+  color: white; /* Text color for the card */
+  padding: 16px;
+  text-align: center;
+}
+
+.ehr-container {
+  height: 57vh;
+  overflow-y: auto;
+}
+
+app-ehr-area {
+  height: 100%;
+}
+
+  
+
+

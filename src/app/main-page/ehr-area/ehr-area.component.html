@@ -1,0 +1,19 @@
+<div class="mat-elevation-z2">
+  <h2 class="header-class">3. Check Electronic Health</h2>
+  <table mat-table [dataSource]="getObjectProperties(getSelectedResult())">
+    <ng-container matColumnDef="element">
+      <th mat-header-cell *matHeaderCellDef>Element</th>
+      <td mat-cell *matCellDef="let prop">{{ prop.key }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="values">
+      <th mat-header-cell *matHeaderCellDef>Values</th>
+      <td mat-cell *matCellDef="let prop">{{ prop.value || 'Not available' }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['element', 'values']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['element', 'values'];"></tr>
+  </table>
+  
+  <div *ngIf="!getSelectedResult()" class="mat-body-1">No result selected</div>
+</div>
