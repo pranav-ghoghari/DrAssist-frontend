@@ -20,13 +20,19 @@ export class SearchBoxComponent {
   constructor(private http: HttpClient, private resultService: ResultService) {}
   
   search() {
-    // Send a POST request to your backend API to search for patient information
-    this.http.post('http://localhost:3000/api/search-patient' , this.searchCriteria)
-      .subscribe((response: any) => {
-        console.log('Search result:', response.results);
-        this.searchResults = response.results; // Assign the results array to searchResults
-      });
+    this.http.post('https://fast-ebony-kumquat.glitch.me/api/search-patient', this.searchCriteria)
+      .subscribe(
+        (response: any) => {
+          console.log('Search result:', response.results);
+          this.searchResults = response.results; // Assign the results array to searchResults
+        },
+        (error: any) => {
+          console.error('Error during search:', error);
+          // Implement any additional error handling logic if needed
+        }
+      );
   }
+  
 
   selectResult(result: any) {
     // Here, you can implement the logic to handle the selected result.

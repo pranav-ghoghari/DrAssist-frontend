@@ -7,7 +7,7 @@ import { catchError, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ChatService {
-  private chatGPTApiEndpoint = 'http://localhost:3000/api/chat';
+  private chatGPTApiEndpoint = 'https://fast-ebony-kumquat.glitch.me/api/chat';
 
   constructor(private http: HttpClient) {}
 
