@@ -16,7 +16,7 @@ export class ChatService {
 
   // Modify the function to return symptom information
   sendPrompt(prompt: string): Observable<string> {
-    return this.http.post<any>(this.chatGPTApiEndpoint, { prompt: prompt })
+    return this.http.post<any>(`${this.chatGPTApiEndpoint}/api/chat`, { prompt: prompt })
       .pipe(
         map(response => {
           if (response.content) {
