@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ResultService } from 'src/app/result.service';
+import { environment } from '../../../environments/environment';
+
 
 @Component({
   selector: 'app-search-box',
@@ -20,7 +22,9 @@ export class SearchBoxComponent {
   constructor(private http: HttpClient, private resultService: ResultService) {}
   
   search() {
-    this.http.post('https://fast-ebony-kumquat.glitch.me/api/search-patient', this.searchCriteria)
+    const apiUrl = `${environment.backendUrl}/api/search-patient`;
+
+    this.http.post(apiUrl, this.searchCriteria)
       .subscribe(
         (response: any) => {
           console.log('Search result:', response.results);

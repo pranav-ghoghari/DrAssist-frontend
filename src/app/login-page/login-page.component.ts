@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 
 @Component({
@@ -15,8 +16,9 @@ export class LoginPageComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
   onSubmit() {
+    const backendUrl = `${environment.backendUrl}/api/login`;
     // Send a POST request to your Node.js server for authentication
-    this.http.post('https://fast-ebony-kumquat.glitch.me/api/login', { username: this.username, password: this.password }, { withCredentials: true })
+    this.http.post(backendUrl, { username: this.username, password: this.password }, { withCredentials: true })
     .subscribe((response: any) => {
         // Handle the authentication response here
         // You can redirect to the main page if authentication is successful
