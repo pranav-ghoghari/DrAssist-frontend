@@ -16,8 +16,8 @@ export class LoginPageComponent {
 
   onSubmit() {
     // Send a POST request to your Node.js server for authentication
-    this.http.post('https://fast-ebony-kumquat.glitch.me/api/login', { username: this.username, password: this.password })
-      .subscribe((response: any) => {
+    this.http.post('https://fast-ebony-kumquat.glitch.me/api/login', { username: this.username, password: this.password }, { withCredentials: true })
+    .subscribe((response: any) => {
         // Handle the authentication response here
         // You can redirect to the main page if authentication is successful
         if (response.message === 'Authentication successful') {
