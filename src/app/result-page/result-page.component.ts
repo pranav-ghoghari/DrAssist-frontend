@@ -29,7 +29,7 @@ export class ResultPageComponent implements OnInit {
     this.savedResultantString = this.symptomsService.getResultantString();
 
     // Construct the prompt after fetching the values
-    this.prompt = `Ehr: ${this.savedResultantString}\nSymptoms: ${this.savedSymptoms}\nfrom the EHR, extract information related to symptoms that is important for the doctor to know to provide the treatment only for the given symptoms. Present this information in form of key: value pairs`;
+    this.prompt = `Ehr: ${this.savedResultantString}\nSymptoms: ${this.savedSymptoms}\nfrom the EHR, extract information related to these symptoms that is important for the doctor to know to provide the treatment . Present this information in form of key: value pairs`;
 
     // Execute the send prompt function
     this.executeSendPrompt();
