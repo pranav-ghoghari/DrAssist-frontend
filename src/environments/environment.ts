@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    backendUrl: 'http://localhost:3000' // Assuming your local server runs on port 3000
+    backendUrl: 'https://fast-ebony-kumquat.glitch.me' // Assuming your local server runs on port 3000
   };
   
